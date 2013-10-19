@@ -8,6 +8,7 @@
 
 $(function(){
 	document.addEventListener("deviceready", function(){
+		window.location.href="#registro";
 		$('#regEnv').click (function (){
 			var nom = $('#regNom').val();
 			var mail = $('#regEma').val();
