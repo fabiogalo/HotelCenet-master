@@ -11,4 +11,4 @@ function tomarFoto(){
 		}, function(err){
 			alert("Error: "+err.code);
 		}, {limit:2});
-};
+}
