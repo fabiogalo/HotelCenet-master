@@ -13,13 +13,20 @@ $(function(){
 			var nom = $('#regNom').val();
 			var mail = $('#regEma').val();
 			var tel = $('#regTel').val();
+			var foto = $('#regFoto').attr('foto');
 			
-			if(nom != '' && mail != '' && tel != ''){
-				enviar datos(nom, mail, tel);//Manda llamar la funcion desde eventos.js
+			if(nom != '' && mail != '' && tel != '' && foto != '' & foto != undefined){
+				enviarDatos(nom, mail, tel, foto); //Manda llamar la funcion desde eventos
 			}
 			else {
 				navigator.notification.alert('Todos los campos seon requeridos', null, 'Error', 'ACEPTAR');
 			}
 		});
+		
+		//Tomar foto
+		$('#regFoto').click(function(){
+			tomarFoto();
+		});
+		
 	}, false);
 });
