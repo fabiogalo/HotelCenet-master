@@ -15,18 +15,7 @@ $(function(){
 			var tel = $('#regTel').val();
 			
 			if(nom != '' && mail != '' && tel != ''){
-				navigator.notification.confirm(nom+'\n' + mail+'\n' + tel,
-				function(btn){
-					switch(btn){
-						case 1:
-							navigator.notification.beep(2);
-							break;
-
-						case 2:
-							navigator.notification.vibrate(2000);
-							break;
-					}
-				}, 'Datos de Registro', 'Beep, Vibrar, Cancelar');
+				enviar datos(nom, mail, tel);//Manda llamar la funcion desde eventos.js
 			}
 			else {
 				navigator.notification.alert('Todos los campos seon requeridos', null, 'Error', 'ACEPTAR');
