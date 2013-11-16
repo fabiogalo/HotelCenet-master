@@ -12,7 +12,7 @@ $(function(){
 		if (!estaRegistrado()){ //sino esta registardo nos manda a la pagina de registro
 			window.location.href="#registro";
 		}
-		$('#regEnv').click (function (){
+		$('#regEnv').click(function (){
 			var nom = $('#regNom').val();
 			var mail = $('#regEma').val();
 			var tel = $('#regTel').val();
