@@ -8,8 +8,9 @@
 
 $(function(){
 	document.addEventListener("deviceready", function(){
-		if (!estaRegistrado()) //sino esta registardo nos manda a la pagina de registro
+		if (!estaRegistrado()){ //sino esta registardo nos manda a la pagina de registro
 			window.location.href="#registro";
+		}
 		$('#regEnv').click (function (){
 			var nom = $('#regNom').val();
 			var mail = $('#regEma').val();
