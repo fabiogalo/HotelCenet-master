@@ -8,6 +8,7 @@
 
 $(function(){
 	document.addEventListener("deviceready", function(){
+		alert();
 		if (!estaRegistrado()){ //sino esta registardo nos manda a la pagina de registro
 			window.location.href="#registro";
 		}
