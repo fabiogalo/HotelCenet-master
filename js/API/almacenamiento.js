@@ -5,7 +5,7 @@ function crearUsuario(nombre, id){
 	window.localStorage.setItem("id", id);
 }
 
-function estaRigistrado(){
+function estaRegistrado(){
 	alert();
 	var id = window.localStorage.getItem("id");
 	if (id == undefined)
