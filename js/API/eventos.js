@@ -27,9 +27,36 @@ $(function(){
 		});
 		
 		//Tomar foto
-		$('#regFoto').click(function(){
+		$('#regFoto').tap(function(){
 			tomarFoto();
 		});
 		
+	//eventos para tipo habitaciones sensillas, dobles, etc
+	//Acciones de nueva reserva
+	$('#nr1 ul:eq(0) li').tap(function(){
+		if($(this).index()>0){
+			$('#nr1 ul:eq(0) li').css('background', '');
+			$(this).css('background','yellow');
+			$('#nr1').attr('th',$(this).index());			
+		}
+	});
+	$('#nrsig').tap(function(){
+		if($('#nr1').attr('th') != undefinded && $('#nr1').attr('th') != '')
+			window.location.href = '#nr2';
+	});
+	
+	$('#resEnv').tap(function(){
+		var pr = $('#resPer').val();
+		var ha = $('#resHab').val();
+		var di = $('#resDia').val();
+		var th = $('#nr1').attr('th');
+		
+		//Preguntamos si esta conectado o no a internet
+		if(estaConectado())
+			return true;
+			//Sincronizamos datos con el servidor
+		else
+			crearReservas(th, pr, ha, di);	//Guardamos datos localmente
+	});
 	}, false);
 });
