@@ -33,7 +33,7 @@ function enviarReservas(th, pr, ha, di){
 								"Reservas Realizadas", "Aceptar");
 		}
 		else{
-			navigator.notification.alert ("Hubo un error en el servidor", null, "Error", "Aceptar");
+			navigator.notification.alert ("Hubo un error en el Registro", null, "Error", "Aceptar");
 		}
 	});
 }

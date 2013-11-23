@@ -53,8 +53,7 @@ $(function(){
 		
 		//Preguntamos si esta conectado o no a internet
 		if(estaConectado())
-			return true;
-			//Sincronizamos datos con el servidor
+			enviarReservas(th, pr, ha, di);//Sincronizamos datos con el servidor
 		else
 			crearReservas(th, pr, ha, di);	//Guardamos datos localmente
 	});
